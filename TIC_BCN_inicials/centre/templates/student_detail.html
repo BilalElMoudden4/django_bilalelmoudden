@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Detalls de l'Alumne{% endblock %}
+
+{% block content %}
+<h2>Detalls de l'Alumne</h2>
+<p><b>Nom:</b> {{ student.nom }}</p>
+<p><b>Cognoms:</b> {{ student.cognom1 }} {{ student.cognom2 }}</p>
+<p><b>Correu:</b> {{ student.correu }}</p>
+<p><b>Mòduls Matriculats:</b> {{ student.moduls_matriculats }}</p>
+<a href="{% url 'students_list' %}">← Tornar a la llista d'Alumnes</a>
+{% endblock %}
