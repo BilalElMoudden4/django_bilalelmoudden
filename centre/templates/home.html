@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Inici{% endblock %}
+
+{% block content %}
+<h2>Benvinguts al Centre TIC Barcelona</h2>
+
+<h3>Llista d'Alumnes</h3>
+<ul>
+    {% for student in students %}
+    <li>
+        <a href="{% url 'student_detail' student.id %}">{{ student.nom }} {{ student.cognom1 }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Llista de Professors</h3>
+<ul>
+    {% for teacher in teachers %}
+    <li>
+        <a href="{% url 'teacher_detail' teacher.id %}">{{ teacher.nom }} {{ teacher.cognom1 }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

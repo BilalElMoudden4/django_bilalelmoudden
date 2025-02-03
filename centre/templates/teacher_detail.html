@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Detalls del Professor{% endblock %}
+
+{% block content %}
+<h2>Detalls del Professor</h2>
+<p><b>Nom:</b> {{ teacher.nom }}</p>
+<p><b>Cognoms:</b> {{ teacher.cognom1 }} {{ teacher.cognom2 }}</p>
+<p><b>Correu:</b> {{ teacher.correu }}</p>
+<p><b>Curs:</b> {{ teacher.curs }}</p>
+<p><b>Tutor:</b> {{ teacher.tutor }}</p>
+<p><b>Mòduls:</b> {{ teacher.moduls }}</p>
+<a href="{% url 'teachers_list' %}">← Tornar a la llista de Professors</a>
+{% endblock %}

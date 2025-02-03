@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Centre{% endblock %}</title>
+</head>
+<body>
+    <header style="background-color: rgb(0, 255, 200); color: rgb(0, 0, 0); padding: 10px;">
+        <h1>Centre TIC Barcelona</h1>
+        <nav>
+            <a href="{% url 'home' %}" style="color: rgb(0, 0, 0); margin-right: 10px;">Inici</a>
+            <a href="{% url 'students_list' %}" style="color: rgb(0, 0, 0); margin-right: 10px;">Alumnes</a>
+            <a href="{% url 'teachers_list' %}" style="color: rgb(0, 0, 0);">Professors</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
