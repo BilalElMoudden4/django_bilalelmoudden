@@ -14,3 +14,7 @@ env/
 *.sqlite3
 *.log
 .env
+
+# Ignorar caché de migraciones de Django
+*/migrations/__pycache__/
+*/migrations/*.pyc
