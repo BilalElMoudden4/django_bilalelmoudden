@@ -54,10 +54,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'TIC_BCN_inicials.urls'
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'autenticacion/templates')],  # Ruta específica
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +74,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'TIC_BCN_inicials.wsgi.application'
 
